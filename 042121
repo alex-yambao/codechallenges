@@ -1,0 +1,55 @@
+const numOpArray = [{
+    num1: 1,
+    num2: 2,
+    operation: '+'
+},
+{
+    num1: 10,
+    num2: 2,
+    operation: '*'
+},
+{
+    num1: 15,
+    num2: 2,
+    operation: '-'
+},
+
+{
+    num1:10,
+    num2: 3,
+    operation: 'x'
+},
+{
+    num1:50,
+    num2: 5,
+    operation: '/'
+}]
+
+
+function doesMath(num1, num2, operation) {
+    var sum = 0;
+    parseInt(num1, num2);
+    switch (operation) {
+    case "+": 
+    return sum = num1 + num2;
+    case "-":
+    return sum = num1 - num2;
+    case "x":
+    return sum = num1 * num2;
+    case "*":
+    return sum = num1 * num2;
+    case "/":
+    return sum = num1 / num2;
+    }
+}
+
+var loopedVal;
+
+function arrayLooper(array) {
+    loopedVal = array.forEach(element => { 
+        let objNumOne = array.num1;
+        let objNumTwo = array.num2;
+        let objOperation = array.operation;
+        doesMath(objNumOne, objNumTwo, objOperation)});
+    return console.log(loopedVal);
+}
